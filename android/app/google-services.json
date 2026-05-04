@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1069046971389",
+    "project_id": "osmartpro",
+    "storage_bucket": "osmartpro.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069046971389:android:c221452f3fb22bb125b794",
+        "android_client_info": {
+          "package_name": "com.example.osmart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhCS5vcMtVXxDVFyPM0uZSdxVqizTjGRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
