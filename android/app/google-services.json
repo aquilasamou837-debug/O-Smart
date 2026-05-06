@@ -7,12 +7,25 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1069046971389:android:c221452f3fb22bb125b794",
+        "mobilesdk_app_id": "1:1069046971389:android:242e941a5029d4d725b794",
         "android_client_info": {
           "package_name": "com.example.osmart"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1069046971389-nm7ka9hpjts5nk2tl59n5k19lgqbpa6l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.osmart",
+            "certificate_hash": "88fe63137e47abd3876a13a996d84c0e15c90a2c"
+          }
+        },
+        {
+          "client_id": "1069046971389-mla9hio5btdu00kgqee5ngg898j2hn45.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAhCS5vcMtVXxDVFyPM0uZSdxVqizTjGRE"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069046971389-mla9hio5btdu00kgqee5ngg898j2hn45.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
