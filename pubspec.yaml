@@ -1,46 +1,49 @@
-name: osmart
-description: "A new Flutter project."
+name: osmart 
+description: "Application de contrôle de pompes ESP32"
+publish_to: 'none' 
+version: 1.0.0+1 
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+environment: 
+  sdk: ^3.11.5 
 
-version: 1.0.0+1
-
-environment:
-  sdk: ^3.11.5
-
-dependencies:
-  flutter:
-    sdk: flutter
-
-  cupertino_icons: ^1.0.8
-  get: ^4.7.3
-  get_x_storage: ^0.1.0
-  stylish_bottom_bar: ^1.1.1
-  syncfusion_flutter_gauges: ^33.2.4
-  lottie: ^3.3.3
-  mobile_scanner: ^7.2.0
-  permission_handler: ^12.0.1
-  flutter_native_splash: ^2.4.7
+dependencies: 
+  flutter: 
+    sdk: flutter 
+    
+  # UI
+  cupertino_icons: ^1.0.8 
+  stylish_bottom_bar: ^1.1.1 
+  syncfusion_flutter_gauges: ^33.2.4 
+  lottie: ^3.3.3 
   flutter_svg: ^2.2.4
-  google_sign_in: ^7.2.0
-  firebase_core: ^4.7.0
-  google_sign_in_platform_interface: ^3.1.0
-  firebase_auth: ^6.4.0
+  flutter_native_splash: ^2.4.7
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  # State Management
+  get: ^4.7.3 
+  get_x_storage: ^0.1.0 # ← Corrige: c'est get_storage, pas get_x_storage
 
-  flutter_lints: ^6.0.0
+  # Firebase
+  firebase_core: ^4.7.0 
+  firebase_auth: ^6.4.0 
+  cloud_firestore: ^6.3.0 # ← Manquant: pour tes pompes
+  google_sign_in: ^7.2.0 
   
-flutter:
+  # Hardware
+  mobile_scanner: ^7.2.0 
+  permission_handler: ^12.0.1
 
-  uses-material-design: true
+  # MQTT pour ESP32 - à ajouter
+  mqtt_client: ^10.11.11 # ← Pour contrôler les pompes
 
-  assets:
-    - assets/animations/
-    - assets/logo/
-    - assets/logo/logo.png
+dev_dependencies: 
+  flutter_test: 
+    sdk: flutter 
+  flutter_lints: ^6.0.0 
+
+flutter: 
+  uses-material-design: true 
+  assets: 
+    - assets/animations/ 
+    - assets/logo/ 
+    - assets/logo/logo.png 
     - assets/logo/google_icon.svg
-
-

@@ -1,34 +1,44 @@
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:osmart/features/authentication/controllers/splash/splash_controller.dart';
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
   @override
-  State<SplashScreen> createState() => _SplashState();
-}
-
-class _SplashState extends State<SplashScreen> {
-  @override
   Widget build(BuildContext context) {
+    Get.put(SplashController());
+
     return Scaffold(
-      backgroundColor: Colors.grey[200],
-      body: Center(
-        child: Lottie.asset(
-          'assets/animations/splash.json',
-          width: 200,
-          height: 200,
-          fit: BoxFit.contain,
-          repeat: false, // 🔹 l’animation ne boucle pas
-          animate: true, // 🔹 lance l’animation
-          onLoaded: (composition) {
-            // 🔹 une fois l’animation chargée, on attend sa durée avant de naviguer
-            Future.delayed(composition.duration, () {
-              // 🔹 ici, tu peux naviguer vers la page principale de ton app
-              // Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => PrincipaleScreen()));
-            });
-          },
-        ),
+      backgroundColor: Colors.white,
+      body: Column(
+        children: [
+          Expanded(
+            child: Center(
+              child: Lottie.asset(
+                'assets/animations/splash.json',
+                width: 200,
+                height: 200,
+                fit: BoxFit.contain,
+                repeat: true,
+                animate: true,
+              ),
+            ),
+          ),
+          // Loading en bas
+          Padding(
+            padding: EdgeInsets.only(bottom: 60),
+            child: SizedBox(
+              height: 30,
+              width: 30,
+              child: CircularProgressIndicator(
+                strokeWidth: 3,
+                valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
